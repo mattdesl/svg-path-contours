@@ -76,7 +76,7 @@ function drawTriangles(ctx, complex) {
 function toMesh(contents) {
     var threshold = 2
     var scale = 10
-    var contours = discretize.contours(parse(contents), scale)
+    var contours = discretize(parse(contents), scale)
 
     contours = contours.map(function(c) {
         return simplify(c, threshold)

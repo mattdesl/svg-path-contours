@@ -20,29 +20,7 @@ function bezierTo(points, scale, start, seg) {
         set(tmp3, seg[5], seg[6]), scale, points)
 }
 
-module.exports = function discreteSVG(svg, scale, paths) {
-    if (!paths)
-        paths = []
-
-    var points = []
-    var pen = [0, 0]
-    norm(abs(svg)).forEach(function(segment, i, self) {
-        if (segment[0] === 'M') {
-            copy(pen, segment.slice(1))
-            points.push(pen)
-        } else if (segment[0] === 'C') {
-            bezierTo(points, scale, pen, segment)
-            set(pen, segment[5], segment[6])
-        } else {
-            throw new Error('illegal type in SVG: '+segment[0])
-        }
-    })
-    return points
-}
-
-module.exports.contours = contours
-
-function contours(svg, scale) {
+module.exports = function contours(svg, scale) {
     var paths = []
 
     var points = []

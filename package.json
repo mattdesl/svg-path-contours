@@ -1,7 +1,7 @@
 {
-  "name": "discretize-svg-path",
+  "name": "svg-path-contours",
   "version": "1.0.0",
-  "description": "gets a discrete list of points from svg",
+  "description": "gets 2D contours from an SVG path",
   "main": "index.js",
   "license": "MIT",
   "author": {
@@ -45,10 +45,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mattdesl/discretize-svg-path.git"
+    "url": "git://github.com/mattdesl/svg-path-contours.git"
   },
-  "homepage": "https://github.com/mattdesl/discretize-svg-path",
+  "homepage": "https://github.com/mattdesl/svg-path-contours",
   "bugs": {
-    "url": "https://github.com/mattdesl/discretize-svg-path/issues"
+    "url": "https://github.com/mattdesl/svg-path-contours/issues"
   }
 }
