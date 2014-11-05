@@ -1,3 +1,4 @@
+//extracts SVG paths into a string, then concats into a JSON
 var extract = require('extract-svg-path')
 var fs = require('fs')
 var path = require('path')
