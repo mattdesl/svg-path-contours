@@ -28,17 +28,21 @@ var result = contours(parse(path))
 Triangulation example:
 
 ```js
-var simplify = require('simplify-path')
 var parse = require('parse-svg-path')
+var simplify = require('simplify-path')
 var contours = require('svg-path-contours')
 var triangulate = require('triangulate-contours')
 
+//get a list of polylines/contours from svg contents
+var lines = contours(parse(path))
+
 //simplify the contours before triangulation
-contours = contours.map(function(path) {
+lines = lines.map(function(path) {
     return simplify(path, threshold)
 })
 
-var shape = triangulate(contours)
+//turns into triangles, returns { positions, cells }
+var shape = triangulate(lines)
 
 //now draw the simplicial complex with Canvas/WebGL/etc
 ```
