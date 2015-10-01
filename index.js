@@ -32,7 +32,6 @@ module.exports = function contours(svg, scale) {
                 paths.push(points)
                 points = []
             }
-            points.push(pen)
         } else if (segment[0] === 'C') {
             bezierTo(points, scale, pen, segment)
             set(pen, segment[5], segment[6])
