@@ -1,6 +1,6 @@
 {
   "name": "svg-path-contours",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "gets 2D contours from an SVG path",
   "main": "index.js",
   "license": "MIT",
